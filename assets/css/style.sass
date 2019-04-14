@@ -2,7 +2,9 @@ $font-family: 'Ubuntu', sans-serif
 $main-color: #ffdb4d
 $secondary-color: #ef5122
 $mobile-size: 700px
-    
+$navbar-width: 200px
+
+
 body
     font-family: $font-family
     
@@ -108,7 +110,9 @@ body
     background: #ffffff
     color: #a3a3a3
     padding: 0 30px
-    
+    position: fixed
+    width: 100%
+
     a
         color: #a3a3a3
     a:hover
@@ -142,7 +146,7 @@ body
             margin: 0
             font-size: 0
             li
-                display: inline-block
+                float: left
                 font-size: 16px
                 margin: 0 12px
                 a
@@ -152,13 +156,14 @@ body
     .notification
         position: relative
         float: right
+        right: 0
         font-size: 18px
         line-height: 70px
-        cursor: pointer
         i
-            margin-top: 4px
+            display: block
+            margin-top: 30px
             padding: 0 10px
-            line-height: 70px
+            cursor: pointer
         i:hover
             color: #333333
 
@@ -184,11 +189,11 @@ body
             position: absolute
             margin-left: -350px
             z-index: 10
-            margin-top: -5px
             display: none
             border-radius: 2px
             font-size: 14px
             padding: 0 18px
+            margin-top: 20px
 
         .arrow-up
             position: absolute
@@ -206,7 +211,6 @@ body
         margin-left: 15px
         color: #111111
         font-size: 14px
-        cursor: pointer
         letter-spacing: 0.3px
         font-weight: 500
         img
@@ -215,8 +219,12 @@ body
             height: 36px
             border-radius: 20px
             margin-right: 8px
+            cursor: pointer
         span
             color: $secondary-color
+        a
+            color: #111111
+            text-decoration: none
 
         .arrow-up
             position: absolute
@@ -249,3 +257,55 @@ body
                     a
                         color: #333333
                         text-decoration: none
+                        display: block
+                    a:hover
+                        color: $secondary-color
+                        transition: 0.1s
+
+.site
+    
+    .nav
+        width: $navbar-width
+        background: #353535
+        float: left
+        color: #ffffff
+        min-height: calc(100vh - 70px)
+        position: fixed
+        margin-top: 70px
+
+        ul
+            padding: 0
+            margin: 0
+            margin-top: 12px
+            list-style: none
+            li
+                display: block
+                a
+                    display: block
+                    height: 40px
+                    line-height: 40px
+                    color: #9d9d9d
+                    text-decoration: none
+                    padding: 0 20px
+                    font-size: 15px
+                    i
+                        margin-right: 10px
+                a:hover
+                    color: #ffffff
+                    transition: 0.1s
+            li.active    
+                a
+                    color: #ffffff
+
+    .content
+        margin-left: $navbar-width
+        float: left
+        margin-top: 70px
+        width: calc(100% - #{$navbar-width})
+        .top-bar
+            width: 100%
+            background: #f6f5f3
+            height: 50px
+            line-height: 50px
+            padding: 0 20px
+            font-size: 15px

@@ -88,7 +88,9 @@ body {
   line-height: 70px;
   background: #ffffff;
   color: #a3a3a3;
-  padding: 0 30px; }
+  padding: 0 30px;
+  position: fixed;
+  width: 100%; }
   .header a {
     color: #a3a3a3; }
   .header a:hover {
@@ -119,7 +121,7 @@ body {
       margin: 0;
       font-size: 0; }
       .header .menu ul li {
-        display: inline-block;
+        float: left;
         font-size: 16px;
         margin: 0 12px; }
         .header .menu ul li a {
@@ -127,13 +129,14 @@ body {
   .header .notification {
     position: relative;
     float: right;
+    right: 0;
     font-size: 18px;
-    line-height: 70px;
-    cursor: pointer; }
+    line-height: 70px; }
     .header .notification i {
-      margin-top: 4px;
+      display: block;
+      margin-top: 30px;
       padding: 0 10px;
-      line-height: 70px; }
+      cursor: pointer; }
     .header .notification i:hover {
       color: #333333; }
     .header .notification span.count {
@@ -157,11 +160,11 @@ body {
       position: absolute;
       margin-left: -350px;
       z-index: 10;
-      margin-top: -5px;
       display: none;
       border-radius: 2px;
       font-size: 14px;
-      padding: 0 18px; }
+      padding: 0 18px;
+      margin-top: 20px; }
     .header .notification .arrow-up {
       position: absolute;
       width: 0;
@@ -177,7 +180,6 @@ body {
     margin-left: 15px;
     color: #111111;
     font-size: 14px;
-    cursor: pointer;
     letter-spacing: 0.3px;
     font-weight: 500; }
     .header .user img {
@@ -185,9 +187,13 @@ body {
       width: 36px;
       height: 36px;
       border-radius: 20px;
-      margin-right: 8px; }
+      margin-right: 8px;
+      cursor: pointer; }
     .header .user span {
       color: #ef5122; }
+    .header .user a {
+      color: #111111;
+      text-decoration: none; }
     .header .user .arrow-up {
       position: absolute;
       width: 0;
@@ -216,6 +222,53 @@ body {
           line-height: 30px; }
           .header .user .user-box ul li a {
             color: #333333;
-            text-decoration: none; }
+            text-decoration: none;
+            display: block; }
+          .header .user .user-box ul li a:hover {
+            color: #ef5122;
+            transition: 0.1s; }
+
+.site .nav {
+  width: 200px;
+  background: #353535;
+  float: left;
+  color: #ffffff;
+  min-height: calc(100vh - 70px);
+  position: fixed;
+  margin-top: 70px; }
+  .site .nav ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
+    list-style: none; }
+    .site .nav ul li {
+      display: block; }
+      .site .nav ul li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #9d9d9d;
+        text-decoration: none;
+        padding: 0 20px;
+        font-size: 15px; }
+        .site .nav ul li a i {
+          margin-right: 10px; }
+      .site .nav ul li a:hover {
+        color: #ffffff;
+        transition: 0.1s; }
+    .site .nav ul li.active a {
+      color: #ffffff; }
+.site .content {
+  margin-left: 200px;
+  float: left;
+  margin-top: 70px;
+  width: calc(100% - 200px); }
+  .site .content .top-bar {
+    width: 100%;
+    background: #f6f5f3;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */
