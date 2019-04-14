@@ -1,5 +1,6 @@
 $font-family: 'Ubuntu', sans-serif
 $main-color: #ffdb4d
+$mobile-size: 700px
     
 body
     font-family: $font-family
@@ -12,6 +13,9 @@ body
     background-size: cover
     width: 100%
 
+    @media screen and (max-width: $mobile-size)
+        background: #ffffff
+
     .login-box
         background: #ffffff
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
@@ -22,6 +26,11 @@ body
         margin: 0 auto
         border-radius: 3px
         margin-top: 20vh
+
+        @media screen and (max-width: $mobile-size)
+            margin: 0
+            width: 100%
+            box-shadow: none
 
         .login-logo
             width: 100px
