@@ -1,5 +1,6 @@
 $font-family: 'Ubuntu', sans-serif
 $main-color: #ffdb4d
+$secondary-color: #ef5122
 $mobile-size: 700px
     
 body
@@ -100,5 +101,151 @@ body
             .color-twitter
                 color: #1da1f2
 
+.header
 
+    height: 70px
+    line-height: 70px
+    background: #ffffff
+    color: #a3a3a3
+    padding: 0 30px
+    
+    a
+        color: #a3a3a3
+    a:hover
+        color: $secondary-color
+        transition: 0.1s
+
+    .bars
+        float: left
+        color: #333333
+        i
+            cursor: pointer
+            font-size: 18px
+            line-height: 70px
+            padding: 0 5px
+
+    .logo
+        float: left
+        margin-left: 10px
+        img
+            height: 25px
+            width: auto
+            display: block
+            margin-top: 22px
             
+    .menu
+        float: left
+        margin-left: 40px
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+            font-size: 0
+            li
+                display: inline-block
+                font-size: 16px
+                margin: 0 12px
+                a
+                    text-decoration: none
+                    
+    
+    .notification
+        position: relative
+        float: right
+        font-size: 18px
+        line-height: 70px
+        cursor: pointer
+        i
+            margin-top: 4px
+            padding: 0 10px
+            line-height: 70px
+        i:hover
+            color: #333333
+
+        span.count
+            background: $secondary-color
+            border-radius: 30px
+            color: #ffffff
+            font-family: "Arial"
+            font-size: 11px
+            width: 16px
+            line-height: 16px
+            text-align: center
+            height: 16px
+            position: absolute
+            top: 21px
+            right: 5px
+
+        .notification-box
+            border: 1px solid #dddddd
+            background: #ffffff
+            width: 400px
+            height: 240px
+            position: absolute
+            margin-left: -350px
+            z-index: 10
+            margin-top: -5px
+            display: none
+            border-radius: 2px
+            font-size: 14px
+            padding: 0 18px
+
+        .arrow-up
+            position: absolute
+            width: 0
+            height: 0
+            border-left: 12px solid transparent
+            border-right: 12px solid transparent
+            border-bottom: 12px solid #e1e1e1
+            margin-top: -12px
+            right: 19px
+
+    .user
+        position: relative
+        float: right
+        margin-left: 15px
+        color: #111111
+        font-size: 14px
+        cursor: pointer
+        letter-spacing: 0.3px
+        font-weight: 500
+        img
+            line-height: 70px
+            width: 36px
+            height: 36px
+            border-radius: 20px
+            margin-right: 8px
+        span
+            color: $secondary-color
+
+        .arrow-up
+            position: absolute
+            width: 0
+            height: 0
+            border-left: 12px solid transparent
+            border-right: 12px solid transparent
+            border-bottom: 12px solid #e1e1e1
+            margin-top: -12px
+            right: 19px
+
+        .user-box
+            position: absolute
+            height: auto
+            background: #ffffff
+            color: #333333
+            border: 1px solid #dddddd
+            border-radius: 2px
+            display: none
+            width: 180px
+            right: 0
+
+            ul
+                padding: 10px 15px
+                margin: 0
+                list-style: none
+                li
+                    display: block
+                    line-height: 30px
+                    a
+                        color: #333333
+                        text-decoration: none
