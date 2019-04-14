@@ -3,6 +3,7 @@ $main-color: #ffdb4d
 $secondary-color: #ef5122
 $mobile-size: 700px
 $navbar-width: 200px
+$sub-navbar-width: 300px
 
 
 body
@@ -293,6 +294,45 @@ body
                 a:hover
                     color: #ffffff
                     transition: 0.1s
+
+                .sub-nav
+                    position: absolute
+                    background: #ffffff
+                    top: 0
+                    left: $navbar-width
+                    width: $sub-navbar-width
+                    display: none
+                    border-top: 1px solid #eaeaea
+                    padding: 20px 0
+
+                    .sub-nav-element
+                        height: auto
+                        line-height: auto
+                        padding: 5px 20px 10px
+                        p
+                            font-size: 16px
+                            font-weight: 600
+                            color: #111111
+                            margin: 0
+                            padding: 0
+                            display: block  
+                        span
+                            color: #999999
+                            line-height: 20px
+                            font-size: 13px
+                            display: block
+
+                    .sub-nav-element:hover
+                        background: $main-color
+
+                .sub-nav-close
+                    position: absolute
+                    background: rgba(0,0,0,0.25)
+                    top: 0
+                    left: $navbar-width + $sub-navbar-width
+                    width: calc(100vw - #{$navbar-width})
+                    display: none
+
             li.active    
                 a
                     color: #ffffff
@@ -309,3 +349,6 @@ body
             line-height: 50px
             padding: 0 20px
             font-size: 15px
+            span
+                color: #bbbbbb
+                margin-left: 6px
